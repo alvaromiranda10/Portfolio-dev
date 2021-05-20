@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body{
+
+  min-height: 100vh;
+  background:#343F4F;
+  display: grid;
+  grid-template-areas:'nav nav nav'
+  'section section section'
+  'footer footer footer';
+  grid-template-rows: 60px auto  100px;
+}
+
+nav{
+  background-color: blue;
+  grid-area: nav;
+}
+
+section{
+  background-color: black;
+  grid-area: section;
+}
+
+footer{
+  background-color: red;
+  grid-area: footer;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.box .static-text{
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.box .dynamic-text{
+  margin-left: 15px;
+  line-height: 96px;
+  height: 96px;
+  overflow: hidden;
+}
+
+
+.dynamic-text li{
+  color: cyan;
+  list-style: none;
+  font-size: 4rem;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation-name: slide;
+  animation-timing-function: steps(3);
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+  100%{
+    top: -288px;
+  }
+}
+
+
+.dynamic-text li span{
+  position: relative;
+}
+
+.dynamic-text li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:  black;
+  border-left: 2px solid cyan;
+  animation-name: typing;
+  animation-duration: 3s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  50%{
+    left: calc(100% + 20px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+/*---------------------------------------------------*/
+@media (max-width: 1400px) { 
+.box .static-text{
+  font-size: 3rem;
+}
+.dynamic-text li{
+  font-size: 3rem;
+}
+.box .dynamic-text{
+  line-height: 67px;
+  height: 67px;
+}
+.dynamic-text li{
+  animation-name: slide;
+  animation-timing-function: steps(3);
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide{
+  100%{
+    top: -201px;
+  }
+}
+}
+
+
+/*---------------------------------------------------*/
+@media (max-width: 992px) { 
+.box{
+  flex-direction: column;
+}
+.box .static-text{
+  font-size: 2.5rem;
+}
+.dynamic-text li{
+  font-size: 2.5rem;
+}
+.box .dynamic-text{
+  line-height: 56px;
+  height: 56px;
+}
+.dynamic-text li{
+  animation-name: slide;
+  animation-timing-function: steps(3);
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide{
+  100%{
+    top: -168px;
+  }
+}
+
+/*---------------------------------------------------*/
+}
+@media (max-width: 768px) { 
+
+}
+
+/*---------------------------------------------------*/
+@media (max-width: 576px) { 
+
+.box .static-text{
+  font-size: 2rem;
+} 
+.dynamic-text li{
+  font-size: 2rem;
+}
+.box .dynamic-text{
+  line-height: 45px;
+  height: 45px;
+}
+.dynamic-text li{
+  animation-name: slide;
+  animation-timing-function: steps(3);
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide{
+  100%{
+    top: -135px;
+  }
+}
+}
+
+
+/*---------------------------------------------------*/
+@media (max-width: 380px) { 
+
+.box .static-text{
+  font-size: 1.5rem;
+} 
+.dynamic-text li{
+  font-size: 1.5rem;
+}
+.box .dynamic-text{
+  line-height: 33px;
+  height: 33px;
+}
+.dynamic-text li{
+  animation-name: slide;
+  animation-timing-function: steps(3);
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide{
+  100%{
+    top: -99px;
+  }
+}
+}
