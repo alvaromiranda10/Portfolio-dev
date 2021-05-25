@@ -4,78 +4,111 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: 'poppins';
 }
 
 body{
-
   min-height: 100vh;
-  background:#343F4F;
+  width: 100%;
   display: grid;
-  grid-template-areas:'nav nav nav'
-  'section section section'
-  'footer footer footer';
-  grid-template-rows: 60px auto  100px;
+  grid-template-areas:'nav section'
+  'nav section';
+  grid-template-rows:  auto auto;
+  grid-template-columns: 160px auto;
 }
 
+#nav-mobile{
+  display: none;
+}
+
+#menu{
+  display: none;
+}
+label[for="menu"] {
+  display: none;
+}
 nav{
-  background-color: blue;
+  background-color:white;
   grid-area: nav;
+  color: black;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+nav ol{
+  flex-grow: 1;
+  list-style: none;
+}
+nav ol li a{
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ol li a:hover{
+  background-color: #00002b;
+  color: white;
+}
+nav ol li a i{
+  margin-right: 0.5rem;
 }
 
 section{
-  background-color: black;
+  background:  #00002b;
   grid-area: section;
+  position: relative;
 }
 
-footer{
-  background-color: red;
-  grid-area: footer;
-}
-
-.box{
+article{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.box .static-text{
   color: white;
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+}
+article span:nth-child(2){
+  font-size: 4rem; 
+  font-weight: 900; 
+  text-align: center;
 }
 
-.box .dynamic-text{
+article .perfil{
+  display: flex; 
+  flex-direction: row; 
+  align-items: baseline;
+}
+article .dynamic-text{
   margin-left: 15px;
-  line-height: 96px;
-  height: 96px;
+  line-height: 47px;
+  height: 47px;
   overflow: hidden;
 }
-
-
 .dynamic-text li{
-  color: cyan;
+  color: white;
+  font-weight: 900;
   list-style: none;
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 2.5rem;
   position: relative;
   top: 0;
   animation-name: slide;
-  animation-timing-function: steps(3);
-  animation-duration: 9s;
+  animation-timing-function: steps(2);
+  animation-duration: 6s;
   animation-iteration-count: infinite;
 }
 
 @keyframes slide{
   100%{
-    top: -288px;
+    top: -94px;
   }
 }
 
-
 .dynamic-text li span{
   position: relative;
+  font-family: consolas;
 }
 
 .dynamic-text li span::after{
@@ -84,11 +117,11 @@ footer{
   left: 0;
   height: 100%;
   width: 100%;
-  background:  black;
-  border-left: 2px solid cyan;
+  background:  #00002b;
+  border-left: 4px solid white;
   animation-name: typing;
   animation-duration: 3s;
-  animation-timing-function: steps(12);
+  animation-timing-function: steps(10);
   animation-iteration-count: infinite;
 }
 
@@ -101,115 +134,73 @@ footer{
   }
 }
 
-
 /*---------------------------------------------------*/
-@media (max-width: 1400px) { 
-.box .static-text{
-  font-size: 3rem;
-}
-.dynamic-text li{
-  font-size: 3rem;
-}
-.box .dynamic-text{
-  line-height: 67px;
-  height: 67px;
-}
-.dynamic-text li{
-  animation-name: slide;
-  animation-timing-function: steps(3);
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-}
-@keyframes slide{
-  100%{
-    top: -201px;
-  }
-}
-}
-
-
-/*---------------------------------------------------*/
-@media (max-width: 992px) { 
-.box{
-  flex-direction: column;
-}
-.box .static-text{
-  font-size: 2.5rem;
-}
-.dynamic-text li{
-  font-size: 2.5rem;
-}
-.box .dynamic-text{
-  line-height: 56px;
-  height: 56px;
-}
-.dynamic-text li{
-  animation-name: slide;
-  animation-timing-function: steps(3);
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-}
-@keyframes slide{
-  100%{
-    top: -168px;
-  }
-}
-
-/*---------------------------------------------------*/
-}
 @media (max-width: 768px) { 
-
+  nav ol li a span{
+    display: none;
+  }
+  
+  body{
+    grid-template-columns: 50px auto;
+  }
 }
 
 /*---------------------------------------------------*/
-@media (max-width: 576px) { 
-
-.box .static-text{
-  font-size: 2rem;
-} 
-.dynamic-text li{
-  font-size: 2rem;
-}
-.box .dynamic-text{
-  line-height: 45px;
-  height: 45px;
-}
-.dynamic-text li{
-  animation-name: slide;
-  animation-timing-function: steps(3);
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-}
-@keyframes slide{
-  100%{
-    top: -135px;
+@media (max-width: 480px) { 
+  label[for="menu"] {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    top: 0;
+    position: absolute;
+    z-index: 5;
+    display: inherit;
   }
-}
-}
 
 
-/*---------------------------------------------------*/
-@media (max-width: 380px) { 
-
-.box .static-text{
-  font-size: 1rem;
-} 
-.dynamic-text li{
-  font-size: 1rem;
-}
-.box .dynamic-text{
-  line-height: 23px;
-  height: 23px;
-}
-.dynamic-text li{
-  animation-name: slide;
-  animation-timing-function: steps(3);
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-}
-@keyframes slide{
-  100%{
-    top: -69px;
+  input:checked  ~ #nav-mobile{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #00002b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
+  
+  input:checked  ~ label[for="menu"] .fa-bars::before {
+    content:"\f00d";
+  }
+
+  #nav-mobile{
+    color: #00002b;
+    align-items: center;
+    display: none;
+  }
+  #nav-mobile ul{
+    flex-grow: 1;
+  }
+
+  #nav-mobile li a {
+    display: block;
+    color: #00002b;
+    background: white;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+    text-decoration: none;
+    border: 1px solid;
+  }
+  
+  
+  
+  nav{
+    display: none;
+  }
+  body{
+    grid-template-columns: 0px auto;
+  }
 }
