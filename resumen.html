@@ -1,8 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
 	<title>Resumen</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		article {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			color: white;
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+		}
+
+		article h1 {
+			margin-bottom: 2rem;
+			text-decoration: underline;
+			font-weight: 400;
+			font-family: sans-serif;
+			font-size: 2rem;
+		}
+
+		article embed {
+			width: 70%;
+			height: 75vh;
+		}
+
+		/*---------------------------------------------------*/
+		@media (max-width: 768px) {
+			article embed {
+				width: 80%;
+			}
+		}
+
+		/*---------------------------------------------------*/
+		@media (max-width: 480px) {
+			article embed {
+				width: 90%;
+				height: 70vh;
+			}
+		}
+	</style>
 </head>
+
 <body>
+	<input type="checkbox" id="input-main-mobile">
+	<label for="input-main-mobile"><i class="fas fa-bars"></i></label>
+	<nav id="nav-mobile">
+		<ul>
+			<li>
+				<a href="index.html">
+					<i class="fas fa-home"></i>
+					<span>Inicio</span>
+				</a>
+			</li>
+			<li>
+				<a href="habilidades.html">
+					<i class="fa fa-cogs"></i>
+					<span>Habilidades</span>
+				</a>
+			</li>
+			<li>
+				<a href="proyectos.html">
+					<i class="fas fa-briefcase"></i>
+					<span>Proyectos</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="far fa-file"></i>
+					<span>Resumen</span>
+				</a>
+			</li>
+			<li>
+				<a href="contacto.html">
+					<i class="far fa-envelope"></i>
+					<span>Contacto</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<nav>
+		<ol>
+			<li>
+				<a href="index.html">
+					<i class="fas fa-home"></i>
+					<span>Inicio</span>
+				</a>
+			</li>
+			<li>
+				<a href="habilidades.html">
+					<i class="fa fa-cogs"></i>
+					<span>Habilidades</span>
+				</a>
+			</li>
+			<li>
+				<a href="proyectos.html">
+					<i class="fas fa-briefcase"></i>
+					<span>Proyectos</span>
+				</a>
+			</li>
+			<li>
+				<a class="active" href="#">
+					<i class="far fa-file"></i>
+					<span>Resumen</span>
+				</a>
+			</li>
+			<li>
+				<a href="contacto.html">
+					<i class="far fa-envelope"></i>
+					<span>Contacto</span>
+				</a>
+			</li>
+		</ol>
+	</nav>
+	<section>
+		<ul class="bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<article>
+			<h1>CURRICULUM VITAE</h1>
+			<embed type="image/jpg" src="https://guillermomuntaner.com/CV-GuillermoMuntaner.pdf">
+		</article>
+	</section>
 </body>
+
 </html>

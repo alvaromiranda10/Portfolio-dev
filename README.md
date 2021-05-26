@@ -2,7 +2,7 @@
 
 ### Desplegado en Netlify
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/443c4651-29c1-457b-ac43-63cc13d05e06/deploy-status)](https://app.netlify.com/sites/my-portfolio-alvaro-miranda/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/443c4651-29c1-457b-ac43-63cc13d05e06/deploy-status)](https://my-portfolio-alvaro-miranda.netlify.app/)
 
 ## 1. PROYECTO: FrontEnd
 
