@@ -23,7 +23,7 @@
 		}
 
 		article h1 {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 			text-decoration: underline;
 			font-weight: 400;
 			font-family: sans-serif;
@@ -33,6 +33,34 @@
 		article iframe {
 			width: 70%;
 			height: 75vh;
+		}
+
+		.btn {
+			display: inline-block;
+			font-weight: 400;
+			color: #fff;
+			background-color: #00002b;
+			font-family: sans-serif;
+			border: 2px solid white;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			user-select: none;
+			padding: .375rem .75rem;
+			margin-bottom: 1rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			border-radius: .25rem;
+			transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+		.btn:hover {
+			background: #fff;
+			color: #00002b;
+		}
+
+		.btn:not(:disabled):not(.disabled) {
+			cursor: pointer;
 		}
 
 		/*---------------------------------------------------*/
@@ -142,8 +170,10 @@
 		</ul>
 		<article>
 			<h1>CURRICULUM VITAE</h1>
-			<iframe src="https://guillermomuntaner.com/CV-GuillermoMuntaner.pdf">
-		</article>
+			<a class="btn" href="https://guillermomuntaner.com/CV-GuillermoMuntaner.pdf" download target="_blank">
+				Descargar Archivo
+			</a>
+			<iframe src="http://docs.google.com/gview?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true"></iframe>
 	</section>
 </body>
 
