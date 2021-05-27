@@ -218,16 +218,22 @@ article {
 .active{
   background-color: #00002b !important;
   color: white !important;
-  text-align: initial !important;
 }
 /*---------------------------------------------------*/
 @media (max-width: 768px) { 
   body{
-    grid-template-columns: 50px auto;
+    grid-template-columns: 60px auto;
   }
   nav ol li a span{
     display: none;
   }
+  nav ol li a {
+      text-align: center;
+  }
+  nav ol li a i {
+      margin-right: 0;
+  }
+
 }
 
 /*---------------------------------------------------*/
