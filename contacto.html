@@ -220,10 +220,15 @@
         <input class="form-control" type="email" placeholder="Email...">
         <input class="form-control" type="text" placeholder="Asunto...">
         <textarea class="form-control" id="message" rows="5" cols="5" placeholder="Mensaje..."></textarea>
-        <input class="btn" type="submit" value="Enviar">
+        <button class="btn" type="button" onclick="sendEmail()">Enviar</button>
       </form>
     </article>
   </section>
+  <script>
+    const sendEmail = () =>{
+      alert("Building: sending mail")
+    }
+  </script>
 </body>
 
 </html>
